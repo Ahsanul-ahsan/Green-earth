@@ -30,7 +30,7 @@ function displayTree(trees) {
         card.innerHTML = `
                         <figure>
                             <img class="h-[220px] w-[200px] pt-2 rounded-sm" src="${tree.image}"
-                                alt="Shoes" />
+                                alt="${tree.name}" title="${tree.name}" />
                          </figure>
                          <div class="card-body">
                             <h2 class="card-title text-[#1F2937] ">${tree.name}</h2>
