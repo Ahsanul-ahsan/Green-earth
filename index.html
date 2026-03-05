@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tailwind & daysi cdn link  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .btn-primary {
+            background-color: #4ade80;
+            color: white;
+            border: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="bg-amber-200 h-[50px]"></div>
+    </header>
+    <!-- banner  -->
+    <section class="md:flex justify-between text-center items-center bg-[#CFF0DC]">
+        <div>
+            <img src="./assetss/hero-leaf1.png" alt="">
+        </div>
+        <div class="">
+            <h2>Plant a Tree, Grow a Future</h2>
+            <p>Join our mission to plant 1 million trees and make the Earth greener for future
+                generations.</p>
+            <button>Get Involved</button>
+        </div>
+        <div class="max-sm:hidden">
+            <img src="./assetss/hero-leaf2.png" alt="">
+        </div>
+
+
+
+    </section>
+
+    <section class="container mx-auto">
+        <h2 class="text-[#1F2937] font-bold text-3xl text-center mb-8 mt-8">Choose Your Trees</h2>
+        <div class="grid grid-cols-1 md:grid-cols-11 gap-8">
+            <!-- Categories -->
+            <div class="bg-white card card-body shadow-2xl col-span-3">
+                <h2 class="font-bold text-center text-2xl">Categories</h2>
+                <div class="space-y-2 ">
+                    <button id="alltressbtn" class="btn btn-success w-full">All tress</button>
+
+                    <div id="btn-container" class="space-y-2">
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Trees -->
+            <div class="col-span-6">
+                <div id="tree-container" class="grid grid-cols-1 sm:grid-cols-3 gap-5 justify-items-center ">
+
+
+
+             </div>
+             <div id="loading-spinner" class="hidden justify-center items-center h-[60vh]">
+                 <span class="loading loading-spinner text-neutral"></span>
+
+             </div>
+
+            </div>
+
+
+            <!-- cart  -->
+            <div class="col-span-2">Your Cart</div>
+
+        </div>
+    </section>
+
+
+
+
+
+    <script src="/index.js"></script>
+</body>
+
+</html>
