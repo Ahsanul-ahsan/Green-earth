@@ -6,12 +6,11 @@ const treeContainer = document.getElementById("tree-container");
 async function loadCategories() {
     const res = await fetch("https://openapi.programming-hero.com/api/categories")
     const data = await res.json();
-    data.categories.forEach(catagory => {
+    data.categories.forEach(category => {
         const btn = document.createElement("button");
         btn.className = "btn btn-outline w-full";
-        btn.innerHTML = catagory.category_name;
+        btn.innerHTML = category.category_name;
         categoriesContainer.appendChild(btn)
-
     });
 
 };
@@ -26,9 +25,9 @@ async function loadTree() {
 function displayTree(trees) {
     trees.forEach((tree) => {
         const card = document.createElement("div");
-        card.className = "card bg-white w-[220px]  shadow-sm";
+        card.className = "card bg-white w-[220px] h-[300px]  shadow-sm";
         card.innerHTML = `
-                        <figure>
+                         <figure>
                             <img class="h-[220px] w-[200px] pt-2 rounded-sm" src="${tree.image}"
                                 alt="${tree.name}" title="${tree.name}" />
                          </figure>
@@ -40,7 +39,7 @@ function displayTree(trees) {
                                 <h2 class="font-bold text-xl text-success">$${tree.price}</h2>
                                 <button class="btn btn-primary">Buy Now</button>
                             </div>
-                        </div>
+                         </div>
 
 
        `;
@@ -48,10 +47,7 @@ function displayTree(trees) {
      treeContainer.appendChild(card);
     });
 
-
 }
-
-
 
 loadCategories();
 loadTree();
